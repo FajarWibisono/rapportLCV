@@ -1,4 +1,4 @@
-﻿import streamlit as st
+import streamlit as st
 import pandas as pd
 import requests
 from docx import Document
@@ -143,8 +143,9 @@ FORMAT OUTPUT:
                 }
             ],
             "temperature": 0.7,
-            "max_tokens": max_tokens
+            "max_completion_tokens": max_tokens  # ✅ DIPERBAIKI: max_tokens → max_completion_tokens
         }
+        # ✅ DIPERBAIKI: hapus spasi ekstra di URL
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data, timeout=60)
         if response.status_code == 200:
             result = response.json()
@@ -838,7 +839,4 @@ def main():
         """)
 
 if __name__ == "__main__":
-
     main()
-
-
