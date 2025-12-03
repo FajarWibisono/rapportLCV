@@ -1,0 +1,8 @@
+python-docx
+pandas
+streamlit
+groq
+PyPDF2
+Pillow
+pytesseract
+openpyxl
