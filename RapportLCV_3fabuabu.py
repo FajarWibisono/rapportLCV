@@ -104,7 +104,7 @@ def read_uploaded_file(uploaded_file):
         return f"Error reading file: {str(e)}"
 
 # Fungsi untuk memanggil OpenAI API
-def call_openai(prompt, max_tokens=4000):
+def call_openai(prompt, max_tokens=4500):
     """Memanggil OpenAI API untuk analisis"""
     try:
         headers = {
@@ -840,4 +840,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
