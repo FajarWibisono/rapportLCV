@@ -142,7 +142,7 @@ FORMAT OUTPUT:
                     "content": prompt
                 }
             ],
-            "temperature": 0.7,
+            "temperature": 0.1,
             "max_completion_tokens": max_tokens  # ✅ DIPERBAIKI: max_tokens → max_completion_tokens
         }
         # ✅ DIPERBAIKI: hapus spasi ekstra di URL
@@ -840,5 +840,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
