@@ -16,7 +16,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 # Konfigurasi API OpenAI (AMAN melalui secrets)
 OPENAI_API_KEY = st.secrets["openai"]["api_key"]
-OPENAI_MODEL = "gpt-5-nano"  # atau "gpt-4o-mini" jika ingin lebih hemat
+OPENAI_MODEL = "gpt-4o"  # atau "gpt-4o-mini" jika ingin lebih hemat
 
 # Konfigurasi halaman
 st.set_page_config(
@@ -142,7 +142,7 @@ FORMAT OUTPUT:
                     "content": prompt
                 }
             ],
-            "temperature": 0.1,
+            "temperature": 0.3,
             "max_completion_tokens": max_tokens  # ✅ DIPERBAIKI: max_tokens → max_completion_tokens
         }
         # ✅ DIPERBAIKI: hapus spasi ekstra di URL
@@ -840,6 +840,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
